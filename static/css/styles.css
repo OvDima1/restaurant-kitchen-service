@@ -1,0 +1,15 @@
+body {
+    margin-top: 20px;
+}
+
+.link-to-page {
+    float: right;
+    margin: 0 2px 0 2px;
+}
+
+#bg {
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-position: bottom;
+    background-attachment: fixed;
+}
