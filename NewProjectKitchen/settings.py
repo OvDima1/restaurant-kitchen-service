@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "crispy_forms",
     "kitchen",
 ]
 
@@ -56,7 +57,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "KitchenProject.urls"
+ROOT_URLCONF = "NewProjectKitchen.urls"
 
 TEMPLATES = [
     {
@@ -76,7 +77,7 @@ TEMPLATES = [
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-WSGI_APPLICATION = "KitchenProject.wsgi.application"
+WSGI_APPLICATION = "NewProjectKitchen.wsgi.application"
 
 
 # Database
