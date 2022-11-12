@@ -3,7 +3,7 @@
 
 {% block content %}
   <h1>
-    DishType List
+    Dish Type List
     <a href="{% url 'kitchen:dishtype-create' %}" class="btn btn-primary link-to-page">
       Create
     </a>
@@ -20,17 +20,26 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Update</th>
+        <th>Delete</th>
       </tr>
-    {% for dishtype in dishtype_list %}
+
+      {% for dishtype in dishtype_list %}
         <tr>
-          <td>{{ dishtype.id }}</td>
-          <td>{{ dishtype.name }}</td>
           <td>
-              <a href="{% url 'kitchen:dishtype-update' pk=dishtype.id %}" class="btn btn-success" style="background: blue">
+              {{ dishtype.id }}
+          </td>
+          <td>
+              {{ dishtype.name }}
+          </td>
+          <td>
+              <a href="{% url 'kitchen:dishtype-update' pk=dishtype.id %}">
                 Update
               </a>
-              <a
-                href="{% url 'kitchen:dishtype-delete' pk=dishtype.id %}" class="btn btn-danger">
+            </td>
+            <td>
+              <a style="color: red"
+                href="{% url 'kitchen:dishtype-delete' pk=dishtype.id %}">
                 Delete
               </a>
             </td>
@@ -39,6 +48,6 @@
     </table>
 
   {% else %}
-      <p>There are no dishtypes in the service.</p>
+      <p>There are no dish types in the service.</p>
   {% endif %}
 {% endblock %}
