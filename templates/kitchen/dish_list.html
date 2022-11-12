@@ -16,13 +16,22 @@
   <br>
   
   {% if dish_list %}
-    <ul class="list-group">
+    <table class="table" style="background: #f2faff">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Dish Type</th>
+      <th>Price</th>
+    </tr>
       {% for dish in dish_list %}
-          <a href="{% url "kitchen:dish-detail" pk=dish.id %} "
-            class="list-group-item list-group-item-action list-group-item-secondary " style="background: #f2faff">{{ dish.id }}
-          {{ dish.model }} ({{ dish.dishtype.name }}, Price:  {{ dish.price }})</a>
+        <tr>
+          <td><a href="{% url 'kitchen:dish-detail' pk=dish.id %} ">{{ dish.id }}</a></td>
+          <td>{{ dish.model }}</td>
+          <td>{{ dish.dishtype.name }}</td>
+          <td>{{ dish.price }} $</td>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
   {% else %}
     <p>There are no dishes in kitchen</p>
   {% endif %}
