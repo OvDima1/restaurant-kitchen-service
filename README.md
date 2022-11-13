@@ -4,7 +4,7 @@ Django project for managing dishes and cooks in kitchen
 
 ## Check it out!
 
-Kitchen project deployed on render.com
+[Kitchen project deployed to render](https://kitchen-service.onrender.com/cooks/)
 
 ## Features
 
